@@ -53,9 +53,9 @@
 </head>
 <body>
     <h1>Lista hotel:</h1>
-    <table>
+    <table class="table mt-4">
         <thead>
-            <tr>
+            <tr class="fs-3">
                 <th scope="col">Nome</th>
                 <th scope="col">Descrizione</th>
                 <th scope="col">Parcheggio</th>
@@ -66,11 +66,11 @@
         <tbody>
             <?php for($i = 0; $i < count($hotels); $i++){ ?>
             <tr>
-                    <th scope="row"><?php echo $hotels[$i]['name']?></th>
-                    <td><?php echo $hotels[$i]['description']?></td>
-                    <td><?php echo $hotels[$i]['parking']?></td>
-                    <td><?php echo $hotels[$i]['vote']?></td>
-                    <td><?php echo $hotels[$i]['distance_to_center']?></td>
+                <th scope="row"><?php echo $hotels[$i]['name']?></th>
+                <td><?php echo $hotels[$i]['description']?></td>
+                <td><?php echo $hotels[$i]['parking']?></td>
+                <td><?php echo $hotels[$i]['vote']?></td>
+                <td><?php echo $hotels[$i]['distance_to_center']?></td>
             </tr>
             <?php }?>  
         </tbody>    
@@ -78,3 +78,14 @@
     </table>
 </body>
 </html>
+
+<!-- /stile pagina/ -->
+<style>
+    h1{
+        max-width: max-content;
+        background-color: azure;
+        padding: 10px;
+        margin: 20px;
+        font-size: 50px;
+    }
+</style>
